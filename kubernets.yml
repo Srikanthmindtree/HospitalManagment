@@ -1,0 +1,20 @@
+appversion: apps/v1
+kind: Deployment
+metadata: 
+  name: doctor
+spec:
+  selector:
+    matchLabels:
+      app: doctor
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: doctor
+    spec:
+      containers:
+        - name: doctor
+          image: doctorspring/
+          ports:
+            - containerPort:80
+                  
